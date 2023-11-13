@@ -1,0 +1,28 @@
+header {
+  height: 100dvh;
+  background: conic-gradient(from 225deg at 0% 100%, #2ec3c9, #330864);
+}
+
+.nav {
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+  gap: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.nav a {
+  color: #fff;
+}
+
+.title {
+  color: #fff;
+  font-size: 4rem;
+  font-family: "Bebas Neue", sans-serif;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
