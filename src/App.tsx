@@ -1,12 +1,10 @@
-import Banner from "./Banner";
-import DataList from "./DataList";
+import Router from "./components/Router";
 
 function App() {
   return (
-    <>
-      <Banner />
-      <DataList />
-    </>
+    <main>
+      <Router />
+    </main>
   );
 }
 
