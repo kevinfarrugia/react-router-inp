@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Banner({ title }: { title: string }) {
   return (
@@ -12,13 +12,34 @@ function Banner({ title }: { title: string }) {
       <nav>
         <ul className={styles.nav}>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? styles.pending : isActive ? styles.active : ""
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">About us</Link>
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? styles.pending : isActive ? styles.active : ""
+              }
+              to="/about"
+            >
+              About us
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? styles.pending : isActive ? styles.active : ""
+              }
+              to="/contact"
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </nav>

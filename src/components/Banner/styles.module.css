@@ -15,7 +15,16 @@
 }
 
 .nav a {
+  padding: 1rem;
   color: #fff;
+}
+
+.pending {
+  border: 1px dotted #ccc;
+}
+
+.active {
+  border: 1px dotted #ff5555;
 }
 
 .title {
