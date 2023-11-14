@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import DataList from "../components/DataList";
 
-function Contact() {
+function About() {
   return (
     <>
       <Banner title="About Us" />
@@ -10,4 +10,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default About;
