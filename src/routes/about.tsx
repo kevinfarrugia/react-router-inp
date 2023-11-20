@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       <Banner title="About Us" />
-      <DataList />
+      <DataList title="About Us"  />
     </>
   );
 }

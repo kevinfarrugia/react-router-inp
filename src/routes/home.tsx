@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       <Banner title="Home" />
-      <DataList />
+      <DataList title="Home" />
     </>
   );
 }

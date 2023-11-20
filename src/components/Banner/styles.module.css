@@ -1,5 +1,5 @@
 .header {
-  height: 100dvh;
+  height: 50dvh;
   background: conic-gradient(from 225deg at 0% 100%, #2ec3c9, #330864);
 }
 
@@ -17,14 +17,15 @@
 .nav a {
   padding: 1rem;
   color: #fff;
+  border: 4px solid transparent;
 }
 
-.pending {
-  border: 1px dotted #ccc;
+.nav a.pending {
+  border: 4px dotted #ccc;
 }
 
-.active {
-  border: 1px dotted #ff5555;
+.nav a.active {
+  border: 4px dotted #ff5555;
 }
 
 .title {

@@ -1,14 +1,18 @@
 import AddToCart from "../AddToCart";
 import styles from "./styles.module.css";
 
-function DataList() {
+function DataList({ title = "" }) {
   return (
     <div className={styles.section}>
-      <h1 className={styles.heading}>Lorem Ipsum</h1>
+      <h1 className={styles.heading}>{title}</h1>
       <ul className={styles.list}>
-        {[...new Array(500)].map((_, index) => (
+        {Array.from({ length: 500 }, () =>
+          Math.floor(Math.random() * 1000)
+        ).map((n, index) => (
           <li key={index} className={styles.item}>
-            <h3 className={styles.itemTitle}>Lorem ipsum dolor sit amet</h3>
+            <h3 className={styles.itemTitle}>
+              {n}. Lorem ipsum dolor sit amet
+            </h3>
             <img
               src="http://placekitten.com/200/300"
               alt="Image of a kitten"

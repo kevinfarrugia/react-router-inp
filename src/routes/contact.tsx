@@ -5,7 +5,7 @@ function Contact() {
   return (
     <>
       <Banner title="Contact" />
-      <DataList />
+      <DataList title="Contact"  />
     </>
   );
 }
