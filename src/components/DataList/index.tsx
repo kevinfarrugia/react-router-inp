@@ -9,7 +9,10 @@ function DataList({ title = "" }) {
         {Array.from({ length: 500 }, () =>
           Math.floor(Math.random() * 1000)
         ).map((n, index) => (
-          <li key={index} className={styles.item}>
+          <li
+            key={index}
+            className={`${styles.item} ${index > 1 ? styles.invisible : ""}`}
+          >
             <h3 className={styles.itemTitle}>
               {n}. Lorem ipsum dolor sit amet
             </h3>
