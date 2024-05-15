@@ -19,6 +19,7 @@ function DataList({ title = "" }) {
               width="200"
               height="300"
               className={styles.thumbnail}
+              loading={index > 1 ? "lazy" : undefined}
             />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
