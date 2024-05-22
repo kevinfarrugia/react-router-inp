@@ -1,36 +1,48 @@
-import AddToCart from "../AddToCart";
+import DataListItem from "../DataListItem";
+import LazyChildren from "../LazyChildren";
 import styles from "./styles.module.css";
+
+const BATCH_SIZE = 20;
 
 function DataList({ title = "" }) {
   return (
     <div className={styles.section}>
       <h1 className={styles.heading}>{title}</h1>
       <ul className={styles.list}>
-        {Array.from({ length: 500 }, () =>
+        {Array.from({ length: BATCH_SIZE }, () =>
           Math.floor(Math.random() * 1000)
-        ).map((n, index) => (
-          <li key={index} className={styles.item}>
-            <h3 className={styles.itemTitle}>
-              {n}. Lorem ipsum dolor sit amet
-            </h3>
-            <img
-              src="http://placekitten.com/200/300"
-              alt="Image of a kitten"
-              width="200"
-              height="300"
-              className={styles.thumbnail}
-              loading={index > 1 ? "lazy" : undefined}
-            />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis
-              aliquam nosl eget ultricies aliquam, nunc nisl aliquet nunc, quis
-              aliquam no.
-            </p>
-            <AddToCart />
-          </li>
+        ).map((n) => (
+          <DataListItem key={n} n={n} />
         ))}
       </ul>
+      <LazyChildren
+        minIntrinsicHeight="800px"
+        threshold={0.1}
+        rootMargin="200px 0px"
+        autoDisconnect={true}
+      >
+        <ul className={styles.list}>
+          {Array.from({ length: BATCH_SIZE }, () =>
+            Math.floor(Math.random() * 1000)
+          ).map((n) => (
+            <DataListItem key={n} n={n} />
+          ))}
+        </ul>
+      </LazyChildren>
+      <LazyChildren
+        minIntrinsicHeight="800px"
+        threshold={0.1}
+        rootMargin="200px 0px"
+        autoDisconnect={true}
+      >
+        <ul className={styles.list}>
+          {Array.from({ length: BATCH_SIZE }, () =>
+            Math.floor(Math.random() * 1000)
+          ).map((n) => (
+            <DataListItem key={n} n={n} />
+          ))}
+        </ul>
+      </LazyChildren>
     </div>
   );
 }
